@@ -2,6 +2,7 @@ import {React , useState , useEffect} from 'react'
 import { Container, ShopBox, Img, BoxTitle, BoxPrg, AddBtn, AddIcon, TitleDiv, Title, CartRating} from './style'
 import axios, { Axios } from 'axios'
 import Loading from './../Loading/Loading'
+import { CartData } from '../../data'
 import { useNavigate } from 'react-router-dom'
 
 const ProductsApi = 'https://fakestoreapi.com/products'
@@ -24,12 +25,17 @@ const Products = () => {
       console.log(error);
     } 
   }, [])
-  
-  let localData = []
 
   function addCart(item){
-    localData.push(item)
-    localStorage.setItem('dataCart' , JSON.stringify(localData))
+    CartData.unshift({
+      id: item.id,
+      title: item.title,
+      category: item.category,
+      description: item.description,
+      img: item.image,
+      price: item.price,
+      rating: item.rating
+    })
   }
 
   function toItem(item){
@@ -41,6 +47,7 @@ const Products = () => {
       <TitleDiv>
         <Title>WELCOME TO OUR SHOP</Title>
       </TitleDiv>
+
         {
           loading ? 
           data?.map((item,index)=>{
@@ -56,7 +63,6 @@ const Products = () => {
           }) : <div style={{width:'100%',height:'70vh',display:'flex',justifyContent:'center',alignItems:'center'}} >
                  <Loading />
               </div>
-
         }
 
     </Container>

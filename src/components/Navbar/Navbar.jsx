@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <Wrapper>
       <Container>
-        <Logo src={Logoo} />
+        <Logo onClick={()=>Navigation('/')} src={Logoo} />
         <LinkDiv>
           <Link to={'/'} >Home</Link>
           <Link to={'/products'} >Products</Link>

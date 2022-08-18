@@ -46,12 +46,6 @@ export const ShopBox = styled.div`
     align-items: flex-start;
     position: relative;
     margin: 18px;
-    transition: all ease 0.5s;
-    cursor: pointer;
-    &:hover{
-        transition: all ease 0.5s;
-        transform: scale(1.1);
-    }
 `
 
 export const Img = styled.img`
@@ -59,6 +53,7 @@ export const Img = styled.img`
     height: 140px;
     transition: all ease 0.5s;
     object-fit: contain;
+    cursor: pointer;
 `
 
 export const BoxTitle = styled.h2`
