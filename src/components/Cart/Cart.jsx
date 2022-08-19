@@ -16,7 +16,7 @@ const Cart = () => {
               <Box key={index}>
                 <img src={item.img} alt="" />
                 <BoxTexts>
-                  <h1>{item.title}</h1><br />
+                  <h1>{item.title.slice(0,20)}</h1><br />
                   <p>{item.category}</p>
                 </BoxTexts>
                 <h2 style={{maxWidth:'200px'}}>{item.description.slice(0,40)}</h2>
