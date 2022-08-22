@@ -5,6 +5,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IconButton } from '@mui/material';
 import { NavLink, useNavigate } from 'react-router-dom';
 
+import Badge from '@mui/material/Badge';
 
 const Navbar = () => {
   
@@ -34,7 +35,9 @@ const Navbar = () => {
           <Link to={'/products'} >Products</Link>
           <Link to={'/contact'} >Contact</Link>
           <IconButton to={'/cart'} LinkComponent={NavLink}>
-            <ShoppingCartIcon />
+            <Badge color='primary' badgeContent={4}>
+              <ShoppingCartIcon />
+            </Badge>
           </IconButton>
         </LinkDiv>
         <Menu onClick={openMenu}/>

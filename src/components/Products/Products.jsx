@@ -32,7 +32,7 @@ const Products = () => {
       title: item.title,
       category: item.category,
       description: item.description,
-      img: item.image,
+      image: item.image,
       price: item.price,
       rating: item.rating
     })
