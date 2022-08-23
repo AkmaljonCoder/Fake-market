@@ -46,6 +46,14 @@ export const Link = styled(NavLink)`
     font-size: 20px !important;
 `
 
+export const LinkTo = styled.h2`
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 400;
+`
+
 export const MenuWrapper = styled.div`
     height: 100%;
     width: 250px;

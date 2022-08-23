@@ -1,13 +1,16 @@
-import {React , useState , useEffect} from 'react'
+import {React , useState , useEffect, useContext} from 'react'
 import { Container, ShopBox, Img, BoxTitle, BoxPrg, AddBtn, AddIcon, TitleDiv, Title, CartRating} from './style'
 import axios, { Axios } from 'axios'
 import Loading from './../Loading/Loading'
 import { CartData } from '../../data'
 import { useNavigate } from 'react-router-dom'
+import { Context } from '../../context/Context'
 
 const ProductsApi = 'https://fakestoreapi.com/products'
 
 const Products = () => {
+
+  const {id,setId} = useContext(Context)
   
   let navigation = useNavigate()
   
@@ -36,6 +39,7 @@ const Products = () => {
       price: item.price,
       rating: item.rating
     })
+    setId(id+1);
   }
 
   function toItem(item){

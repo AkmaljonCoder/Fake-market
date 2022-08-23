@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import Products from './components/Products/Products'
-import Contact from './components/Contact/Contact'
 import Cart from './components/Cart/Cart'
 import Item from './components/Item/Item'
 import NFound from './components/NotFound/NFound'
@@ -23,7 +22,6 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/Products' element={<Products/>} />
-            <Route path='/contact' element={<Contact/>} />
             <Route path='/cart' element={<Cart/>} />
             <Route path='/item' element={<Item/>} />
             <Route path='*' element={<NFound/>} />
