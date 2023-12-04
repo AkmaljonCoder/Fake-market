@@ -36,7 +36,7 @@ const Navbar = () => {
         <LinkDiv>
           <Link to={'/'} >Home</Link>
           <Link to={'/products'} >Products</Link>
-          <LinkTo onClick={()=>window.open('https://akmaljon-azimov.vercel.app/')} >Contact</LinkTo>
+          <LinkTo onClick={()=>window.open('https://akmalcoder.vercel.app/')} >Contact</LinkTo>
           <IconButton to={'/cart'} onClick={()=>setId(0)} LinkComponent={NavLink}>
             <Badge color='primary' badgeContent={id}>
               <ShoppingCartIcon />
